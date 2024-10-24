@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif; /* Se seleciona el tipo de letra que semanejara  */
+    margin: 0; /* se eleminan las margenes del body para que ocupe todo el spacio */
+}
+
+.galeria {  /* Selecciona las  clase de la galería */
+    display: flex;  /* se aplica flex box */
+    flex-wrap: wrap;  /* ajusta el contenido  apra que no se desborde*/
+    justify-content: center;  /*centra los elementos */
+    gap: 10px;  /* hace un  ajuste   de  10 px enetre el conetino y el borde */
+    max-width: 800px;  /* Establece un ancho máximo de 800 píxeles */
+    margin: 0 auto;  /* Centra el contenedor horizontalmente en la página */
+}
+
+.galeria img {  /* Selecciona las  clase de la galería   y las  imagenes dentro */
+    width: 23%;   /* Establece el ancho de cada imagen al 23% del ancho del contenedor*/
+    height: auto; /*ajustando la altura automáticamente */
+    object-fit: cover;  /* Asegura que la imagen cubra completamente su contenedor*/
+}
+
+
+.galeria img { /* Selecciona nuevamente las imágenes para aplicar más estilos */
+    border-radius: 5px; /* Redondea las esquinas de las imágenes con un radio de 5 píxeles */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Aplica una sombra */
+    transition: all 0.3s ease; /* Define una transición */
+}
+
+/* Este  es le media   cueri la parte  que ajutara el css   segun el  tamño de la pantalla*/
+@media (max-width: 768px) { /* Este   se aplicara  una vex la pantalla tenga un ancho maximo de  768px*/
+    .galeria img {
+        width: 48%; 
+    }
+}
+
+@media (max-width: 480px) { /* Este   se aplicara  una vex la pantalla tenga un ancho maximo de  480px*/
+    .galeria img {  /* las   imagenes   tendran un ancho del 95%   de la iamgen  */
+        width: 95%; 
+    }
+}
